@@ -1,0 +1,7 @@
+.git
+.DS_Store
+node_modules
+src
+test
+.jest-cache
+test-results

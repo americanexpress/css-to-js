@@ -1,0 +1,9 @@
+{
+  "extends": "amex",
+  "rules": {
+    "no-console": ["error", { allow: ["warn", "error"] }]
+  },
+  "plugins": [
+    "import"
+  ]
+}

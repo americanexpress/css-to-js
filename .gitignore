@@ -1,0 +1,8 @@
+.DS_Store
+node_modules
+npm-debug.log
+test/test-inputs/generated-js
+lib
+.jest-cache
+test-results
+

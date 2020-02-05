@@ -1,0 +1,87 @@
+{
+  "name": "@americanexpress/css-to-js",
+  "homepage": "https://github.com/americanexpress/css-to-js",
+  "bugs": {
+    "url": "https://github.com/americanexpress/css-to-js/issues"
+  },
+  "contributors": [
+    "Rachel Foreman <rforeman416@gmail.com> (https://github.com/ivy4)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/americanexpress/css-to-js.git"
+  },
+  "version": "1.0.0",
+  "description": "Convert pure CSS to JavaScript literal objects or React Style",
+  "bin": "./bin/cssToJs.js",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "scripts": {
+    "build": "rollup --config",
+    "clean": "rimraf test/test-inputs/generated-js",
+    "lint": "eslint src/**/*.js test/**/*.js bin/**/*.js",
+    "pretest": "npm run clean && npm run build",
+    "test": "jest && npm run test:git-history",
+    "test:lockfile": "lockfile-lint -p package-lock.json -t npm -a npm -o https: -c -i",
+    "posttest": "npm run lint && npm run test:lockfile",
+    "test:git-history": "commitlint --from origin/master --to HEAD",
+    "prepack": "npm run build"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test",
+      "commit-msg": "commitlint --edit $HUSKY_GIT_PARAMS"
+    }
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "bin/*.js"
+    ],
+    "preset": "amex-jest-preset"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "@babel/register": "^7.7.4",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@rollup/plugin-node-resolve": "^7.0.0",
+    "@semantic-release/changelog": "^3.0.5",
+    "@semantic-release/commit-analyzer": "^6.3.2",
+    "@semantic-release/git": "^7.0.18",
+    "@semantic-release/npm": "^5.3.4",
+    "@semantic-release/release-notes-generator": "^7.3.2",
+    "amex-jest-preset": "^5.0.0",
+    "commitlint": "^8.2.0",
+    "eslint": "^6.7.2",
+    "eslint-config-amex": "^11.1.0",
+    "husky": "^4.0.9",
+    "jest": "^24.9.0",
+    "lockfile-lint": "^3.0.12",
+    "rimraf": "^3.0.0",
+    "rollup": "^1.27.8",
+    "rollup-plugin-babel": "^4.3.3",
+    "semantic-release": "^15.13.30"
+  },
+  "dependencies": {
+    "css": "^2.2.4"
+  },
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/git",
+      "@semantic-release/npm"
+    ],
+    "branch": "master"
+  },
+  "keywords": [
+    "css to js",
+    "style objects",
+    "js styles",
+    "convert css to js"
+  ]
+}

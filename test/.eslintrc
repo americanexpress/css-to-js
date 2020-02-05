@@ -1,0 +1,6 @@
+{
+  "extends": "amex/test",
+  "rules": {
+    "global-require": "off"
+  }
+}
