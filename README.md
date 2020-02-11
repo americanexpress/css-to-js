@@ -5,7 +5,7 @@
 [![npm](https://img.shields.io/npm/v/@americanexpress/css-to-js)](https://www.npmjs.com/package/@americanexpress/css-to-js)
 [![Travis (.org) branch](https://img.shields.io/travis/americanexpress/css-to-js/master)](https://travis-ci.org/americanexpress/css-to-js)
 
-> Tool for transforming CSS into JS 
+> Tool for transforming CSS into JS
 
 ## 👩‍💻 Hiring 👨‍💻
 
