@@ -1,12 +1,11 @@
-<h1>  
-  <center>  
-    <br />  
-    <img src="./css-to-js.png" alt="CSS to JS - One Amex" width="50%" />  
-    <br /><br />  
-  </center>  
-</h1>  
+<h1 align="center">
+  <img src='https://github.com/americanexpress/css-to-js/raw/master/css-to-js.png' alt="CSS to JS - One Amex" width='50%'/>
+</h1>
 
-> Tool for transforming CSS into JS 
+[![npm](https://img.shields.io/npm/v/@americanexpress/css-to-js)](https://www.npmjs.com/package/@americanexpress/css-to-js)
+[![Travis (.org) branch](https://img.shields.io/travis/americanexpress/css-to-js/master)](https://travis-ci.org/americanexpress/css-to-js)
+
+> Tool for transforming CSS into JS
 
 ## 👩‍💻 Hiring 👨‍💻
 
