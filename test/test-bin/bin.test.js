@@ -89,6 +89,7 @@ describe('cssToJs', () => {
       global.console = { log: jest.fn() };
       require('../../bin/cssToJs');
 
+      expect(console.log).toHaveBeenCalled();
       expect(console.log).toHaveBeenCalledWith(
         `
 Usage:

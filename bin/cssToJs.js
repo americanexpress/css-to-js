@@ -24,14 +24,14 @@ Usage:
 Arguments:
   inputPath   input path to css file or dir of css files
   outputPath  output path to js file or dir
-  
+
 Options:
   --help
   --version
   --mediaReverse  reverse mediaQuery style properties (see Readme for more details)
   --splitFile  generate multiple files with exports for each selector in css file (see Readme for more details)
   --shakeFile  generate single file with exports for each selector in css file (see Readme for more details)
-  
+
   If shakeFile or splitFile is not specified, generate single file with single exported object with selectors in css file  as keys
 `;
 
