@@ -14,7 +14,7 @@
  * the License.
  */
 
-describe('CsstoJs', () => {
+describe('cssToJs', () => {
   const originalProcessArgv = process.argv;
 
   afterAll(() => {
@@ -22,11 +22,11 @@ describe('CsstoJs', () => {
   });
 
   describe('CLI', () => {
-    let CssToJs;
+    let cssToJs;
     beforeEach(() => {
       jest.resetModules();
       jest.resetAllMocks();
-      CssToJs = require('../../lib/cjs');
+      cssToJs = require('../../lib/cjs');
       jest.mock('../../lib/cjs/index', () => ({
         convert: jest.fn(),
       }));
@@ -38,8 +38,8 @@ describe('CsstoJs', () => {
 
     it('converts to file', () => {
       process.argv = [...process.argv, 'input', 'output'];
-      require('../../bin/CssToJs');
-      expect(CssToJs.convert).toBeCalledWith('input', {
+      require('../../bin/cssToJs');
+      expect(cssToJs.convert).toBeCalledWith('input', {
         mediaReverse: false,
         outputPath: 'output',
         outputType: 'file',
@@ -48,8 +48,8 @@ describe('CsstoJs', () => {
 
     it('converts to file with media reverse', () => {
       process.argv = [...process.argv, 'input', 'output', '--mediaReverse'];
-      require('../../bin/CssToJs');
-      expect(CssToJs.convert).toBeCalledWith('input', {
+      require('../../bin/cssToJs');
+      expect(cssToJs.convert).toBeCalledWith('input', {
         mediaReverse: true,
         outputPath: 'output',
         outputType: 'file',
@@ -58,8 +58,8 @@ describe('CsstoJs', () => {
 
     it('converts to split files', () => {
       process.argv = [...process.argv, 'input', 'output', '--mediaReverse', '--splitFile'];
-      require('../../bin/CssToJs');
-      expect(CssToJs.convert).toBeCalledWith('input', {
+      require('../../bin/cssToJs');
+      expect(cssToJs.convert).toBeCalledWith('input', {
         mediaReverse: true,
         outputPath: 'output',
         outputType: 'splitFile',
@@ -68,8 +68,8 @@ describe('CsstoJs', () => {
 
     it('converts to shake file', () => {
       process.argv = [...process.argv, 'input', 'output', '--mediaReverse', '--shakeFile'];
-      require('../../bin/CssToJs');
-      expect(CssToJs.convert).toBeCalledWith('input', {
+      require('../../bin/cssToJs');
+      expect(cssToJs.convert).toBeCalledWith('input', {
         mediaReverse: true,
         outputPath: 'output',
         outputType: 'shakeFile',
@@ -79,7 +79,7 @@ describe('CsstoJs', () => {
     it('returns version on --version', () => {
       process.argv = [...process.argv, '--version'];
       global.console = { log: jest.fn() };
-      require('../../bin/CssToJs');
+      require('../../bin/cssToJs');
 
       expect(console.log).toHaveBeenCalledWith('1.0.0');
     });
@@ -87,8 +87,9 @@ describe('CsstoJs', () => {
     it('returns help message on --help', () => {
       process.argv = [...process.argv, '--help'];
       global.console = { log: jest.fn() };
-      require('../../bin/CssToJs');
+      require('../../bin/cssToJs');
 
+      expect(console.log).toHaveBeenCalled();
       expect(console.log).toHaveBeenCalledWith(
         `
 Usage:
@@ -97,14 +98,14 @@ Usage:
 Arguments:
   inputPath   input path to css file or dir of css files
   outputPath  output path to js file or dir
-  
+
 Options:
   --help
   --version
   --mediaReverse  reverse mediaQuery style properties (see Readme for more details)
   --splitFile  generate multiple files with exports for each selector in css file (see Readme for more details)
   --shakeFile  generate single file with exports for each selector in css file (see Readme for more details)
-  
+
   If shakeFile or splitFile is not specified, generate single file with single exported object with selectors in css file  as keys
 `
       );
