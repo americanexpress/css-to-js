@@ -1,9 +1,9 @@
 <h1 align="center">
-  <img src='https://github.com/americanexpress/css-to-js/raw/master/css-to-js.png' alt="CSS to JS - One Amex" width='50%'/>
+  <img src='https://github.com/americanexpress/css-to-js/raw/main/css-to-js.png' alt="CSS to JS - One Amex" width='50%'/>
 </h1>
 
 [![npm](https://img.shields.io/npm/v/@americanexpress/css-to-js)](https://www.npmjs.com/package/@americanexpress/css-to-js)
-[![Travis (.org) branch](https://img.shields.io/travis/americanexpress/css-to-js/master)](https://travis-ci.org/americanexpress/css-to-js)
+[![Travis (.org) branch](https://img.shields.io/travis/americanexpress/css-to-js/main)](https://travis-ci.org/americanexpress/css-to-js)
 
 > Tool for transforming CSS into JS
 
@@ -129,10 +129,10 @@ convert(
   
 **Output: `Example1.js`**  
 ```js  
-export default {   
-  class1: { color: 'red' },   
-  class2: { color: 'blue' } 
-}  
+export default {
+  class1: { color: 'red' },
+  class2: { color: 'blue' },
+};
 ```  
   
 ---  
@@ -152,8 +152,8 @@ convert(
   
 **Output: `Example2.js`**  
 ```js  
-export const class1 = { color: 'red' };  
-export const class2 = { color: 'blue' };  
+export const class1 = { color: 'red' };
+export const class2 = { color: 'blue' };
 ```  
   
 ---  
@@ -175,12 +175,12 @@ convert(
   
 **`class1.js`**  
 ```js  
-export default { color: 'red' };  
+export default { color: 'red' };
 ```  
   
 **`class2.js`**  
 ```js  
-export default { color: 'blue' }; 
+export default { color: 'blue' };
 ```  
   
 #### Media Reverse  
@@ -215,15 +215,15 @@ convert(
 
 **`Example4.js`**  
 ```js  
-export default {   
-  class1: { color: 'red' },   
-  '@media (min-width:500px)': {  
-    class2: { color: 'blue' }   
-  },  
+export default {
+  class1: { color: 'red' },
+  '@media (min-width:500px)': {
+    class2: { color: 'blue' },
+  },
   '@media (min-width:1000px)': {
-    class2: { color: 'green' }   
-  }  
-}  
+    class2: { color: 'green' },
+  },
+};
 ````  
   
 If mediaReverse is set to **true**:  
@@ -241,17 +241,17 @@ convert(
   
 **`Example4.js`**  
 ```js  
-export default {   
- class1: { color: 'red' },   
- class2: {   
-   '@media (min-width:500px)': {  
-     color: 'blue'   
-   },  
-   '@media (min-width:1000px)': {
-     color: 'green'   
-   }    
- }  
-}  
+export default {
+  class1: { color: 'red' },
+  class2: {
+    '@media (min-width:500px)': {
+      color: 'blue',
+    },
+    '@media (min-width:1000px)': {
+      color: 'green',
+    },
+  },
+};
 ````  
   
   
