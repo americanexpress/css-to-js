@@ -3,7 +3,7 @@
 </h1>
 
 [![npm](https://img.shields.io/npm/v/@americanexpress/css-to-js)](https://www.npmjs.com/package/@americanexpress/css-to-js)
-[![Travis (.org) branch](https://img.shields.io/travis/americanexpress/css-to-js/main)](https://travis-ci.org/americanexpress/css-to-js)
+![Health Check](https://github.com/americanexpress/css-to-js/workflows/Health%20Check/badge.svg)
 
 > Tool for transforming CSS into JS
 
