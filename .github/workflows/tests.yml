@@ -25,12 +25,8 @@ jobs:
       run: npm ci
       env:
         NODE_ENV: development
-    - name: Unit Tests
-      run: npm run test:unit
-      env:
-        NODE_ENV: production
-    - name: Git History Test
-      run: npm run test:git-history
+    - name: Unit Tests and Git History Test
+      run: npm run test
       env:
         NODE_ENV: production
     - name: Lockfile Lint Test
@@ -38,6 +34,6 @@ jobs:
       env:
         NODE_ENV: production
     - name: Lint
-      run: npm run test:lint
+      run: npm run lint
       env:
         NODE_ENV: production
