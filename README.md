@@ -54,9 +54,8 @@ Arguments:
  ```  
   
 Node:   
-```bash  
-import { convert } from 'css-to-js';  
-Example Usage:   
+```js 
+import { convert } from 'css-to-js';    
 
 //Input CSS string, Outputs JS Object  
 convert(`.myClass { color: 'red' }`);   
