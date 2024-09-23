@@ -61,7 +61,7 @@
     "jest": "^24.9.0",
     "lockfile-lint": "^4.3.6",
     "rimraf": "^3.0.0",
-    "rollup": "^1.27.8",
+    "rollup": "^3.29.5",
     "rollup-plugin-babel": "^4.3.3",
     "semantic-release": "^17.4.4"
   },
