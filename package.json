@@ -54,7 +54,7 @@
     "@semantic-release/npm": "^9.0.1",
     "@semantic-release/release-notes-generator": "^7.3.2",
     "amex-jest-preset": "^6.1.0",
-    "commitlint": "^8.2.0",
+    "commitlint": "^20.3.1",
     "eslint": "^6.7.2",
     "eslint-config-amex": "^11.1.0",
     "husky": "^4.0.9",
